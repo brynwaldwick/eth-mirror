@@ -1,0 +1,12 @@
+{
+  "name": "eth-mirror",
+  "version": "0.0.1",
+  "scripts": {
+    "restart-service": "pm2 restart eth-mirror:data || pm2 start --name eth-mirror:data service.coffee",
+    "restart": "npm run restart-service"
+  },
+  "dependencies": {
+    "data-service": "git+ssh://git@github.com:prontotype-us/data-service.git",
+    "somata": "^0.2.6"
+  }
+}
